@@ -1,0 +1,82 @@
+!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PATIENT</title>
+	<style>
+  .dropdown {
+    position: relative;
+    display: inline;
+    margin-right: 10px;
+  }
+  .dropdown-contents {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 0; /* Aligning dropdown contents to the left */
+  }
+  .dropdown:hover .dropdown-contents {
+    display: block;
+  }
+  .dropdown-contents a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-contents a:hover {
+    background-color: #f1f1f1;
+  }
+</style>
+</head>
+<body bgcolor="grey">
+	 <ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;"><a href="./home.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Home</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./about.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">About</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./contact.html" style="padding: 10px; color: white; background-color: darkblue; text-decoration: none; margin-right: 15px;">Contact</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Appointment.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Appointment</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Doctor.php" style="padding: 10px; color: white; background-color: darkblue;text-decoration: none; margin-right: 15px;">Doctor</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Patient.php" style="padding: 10px; color: white; background-color: darkblue; text-decoration: none; margin-right: 15px;">Patient</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Insurance.php" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Insurance</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Payment.html" style="padding: 10px; color: white; background-color: darkblue;text-decoration: none; margin-right: 15px;">Payment</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Prescription.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Prescription</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Medical.html" style="padding: 10px; color: white; background-color: darkblue;text-decoration: none; margin-right: 15px;">Medical_clinic</a></li>
+    <li class="dropdown" style="display: inline; margin-right: 10px;">
+      <a href="#" style="padding: 10px; color: white; background-color: darkblue; text-decoration: none; margin-right: 15px;">Settings</a>
+      <div class="dropdown-contents">
+        <!-- Links inside the dropdown menu -->
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="logout.php">Logout</a>
+      </div>
+    </li>
+  </ul>
+		<h1>Patient Form</h1>
+<form method="post" action="patient.php">
+
+<label for="pid">Patient Id:</label>
+<input type="number" id="pid" name="patient_id" required><br><br>
+
+<label for="pname">Patientname:</label>
+<input type="name" id="pname" name="pname" required><br><br>
+
+<label for="pad">Patientaddress:</label>
+<input type="name" id="pad" name="pad" required><br><br>
+
+<label for="pn">Phonenumber:</label>
+<input type="pn" id="phonenumber" name="pn" required><br><br>
+
+<label for="eml">Email:</label>
+<input type="name" id="eml" name="eml" required><br><br>
+
+
+<input type="submit" name="add" value="Insert"><br><br>
+
+<a href="./home.html">Go Back to Home</a>
+
+</form>
+</body>
+</html>

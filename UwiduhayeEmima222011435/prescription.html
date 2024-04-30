@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PRESCRIPTION</title>
+	<style>
+  .dropdown {
+    position: relative;
+    display: inline;
+    margin-right: 10px;
+  }
+  .dropdown-contents {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 0; /* Aligning dropdown contents to the left */
+  }
+  .dropdown:hover .dropdown-contents {
+    display: block;
+  }
+  .dropdown-contents a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-contents a:hover {
+    background-color: #f1f1f1;
+  }
+</style>
+</head>
+<body bgcolor="grey">
+	<ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;"><a href="./home.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Home</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./about.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">About</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./contact.html" style="padding: 10px; color: white; background-color: darkblue; text-decoration: none; margin-right: 15px;">Contact</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Appointment.php" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Appointment</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Doctor.php" style="padding: 10px; color: white; background-color: darkblue;text-decoration: none; margin-right: 15px;">Doctor</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Patient.php" style="padding: 10px; color: white; background-color: darkblue; text-decoration: none; margin-right: 15px;">Patient</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Insurance.php" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Insurance</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Payment.html" style="padding: 10px; color: white; background-color: darkblue;text-decoration: none; margin-right: 15px;">Payment</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Prescription.html" style="padding: 10px; color: white; background-color:  darkblue; text-decoration: none; margin-right: 15px;">Prescription</a></li>
+    <li style="display: inline; margin-right: 10px;"><a href="./Medical.php" style="padding: 10px; color: white; background-color: darkblue;text-decoration: none; margin-right: 15px;">Medical_clinic</a></li>
+    <li class="dropdown" style="display: inline; margin-right: 10px;">
+      <a href="#" style="padding: 10px; color: white; background-color: darkblue; text-decoration: none; margin-right: 15px;">Settings</a>
+      <div class="dropdown-contents">
+        <!-- Links inside the dropdown menu -->
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="logout.php">Logout</a>
+      </div>
+    </li>
+  </ul>
+		<h1>Prescription Form</h1>
+<form method="POST" action="prescription.php">
+	<label for="prid">prescription_id:</label>
+<input type="number" id="prid" name="prid" required><br><br>
+
+<label for="mname">medication_name:</label>
+<input type="name" id="mname" name="mname" required><br><br>
+
+<label for="dosage">Dosage:</label>
+<input type="number" id="dosage" name="dosage" required><br><br>
+<label for="fr">Frequency:</label>
+<input type="number" id="fr" name="fr" required><br><br>
+
+<label for="start">Startdate:</label>
+<input type="date" id="startdate" name="start" required><br><br>
+<label for="end">enddate:</label>
+<input type="date" id="end" name="end" required><br><br>
+<label for="pt">patient_id:</label>
+<input type="number" id="pt" name="pt" required><br><br>
+
+<label for="dt">doctor_id:</label>
+<input type="number" id="dt" name="dt" required><br><br>
+<label for="appoint">appointment_id:</label>
+<input type="number" id="appoint" name="appoint" required><br><br>
+<input type="submit" name="add" value="Insert"><br><br>
+
+<a href="./home.html">Go Back to Home</a>
+
+</form>
+</body>
+</html>
